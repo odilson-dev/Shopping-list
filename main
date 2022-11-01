@@ -1,0 +1,45 @@
+menu = """Choisissez parmi les 5 options suivantes:
+1: Ajouter un element a la liste
+2: Retirer un element de la liste
+3: Afficher les element de la liste
+4: Vider la liste
+5: Quitter le programme
+"""
+start = True
+liste_de_course = []
+while start:
+    print(menu)
+    choix_utilisateur = input("Entrez votre choix ici:")
+    if not choix_utilisateur in ["1", "2", "3", "4", "5"]:
+        print("Votre reponse n'est pas valide, veuillez réessayer svp:")
+        continue
+    elif choix_utilisateur == "1":
+        nouveau_element = input("Entrez le nom d'un element a ajouter dans la liste:")
+        liste_de_course.append(nouveau_element)
+        print(f"L'element {nouveau_element} a bien ete ajouté dans la liste.")
+        continue
+    elif choix_utilisateur == "2":
+        element_a_retirer = input("Entrez le nom de l'element a retirer de la liste de course:")
+        if element_a_retirer in liste_de_course:
+            liste_de_course.remove(element_a_retirer)
+            print(f"L'element {element_a_retirer} a bien ete supprimé de la liste de course")
+            continue
+        else:
+            print(f"L'element {element_a_retirer} n'est pas dans la liste")
+            continue
+
+    elif choix_utilisateur == "3":
+        print("Voici le contenu de la liste:")
+        if liste_de_course:
+            for index, element in enumerate(liste_de_course):
+                print(f"{index+1}. {element}")
+            continue
+        else:
+            print(f"La liste est vide: {liste_de_course}")
+    elif choix_utilisateur == "4":
+        liste_de_course.clear()
+        print("La liste a été vidée de son contenu.")
+        continue
+    elif choix_utilisateur == "5":
+        print("Programme terminée")
+        start = False
