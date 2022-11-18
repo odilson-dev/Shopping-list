@@ -1,2 +1,2 @@
-# Liste_de_course
-C'est un script qui permet a l'utilisateur de modifier une liste de course avec 5 options
+# Shopping-list
+This is a script that allows the user to modify a shopping list with 5 options
