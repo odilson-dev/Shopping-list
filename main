@@ -1,20 +1,20 @@
-menu = """Choisissez parmi les 5 options suivantes:
-1: Ajouter un element a la liste
-2: Retirer un element de la liste
-3: Afficher les element de la liste
-4: Vider la liste
-5: Quitter le programme
+menu = """Choose from the following 5 options:
+1: Add item to list
+2: Remove an item from the list
+3: Show list items
+4: Clear list
+5: Quit the program
 """
 start = True
 liste_de_course = []
 while start:
     print(menu)
-    choix_utilisateur = input("Entrez votre choix ici:")
+    choix_utilisateur = input("Enter your choice here:")
     if not choix_utilisateur in ["1", "2", "3", "4", "5"]:
-        print("Votre reponse n'est pas valide, veuillez réessayer svp:")
+        print("Your answer is invalid, please try again:")
         continue
     elif choix_utilisateur == "1":
-        nouveau_element = input("Entrez le nom d'un element a ajouter dans la liste:")
+        nouveau_element = input("Enter the name of an item to add to the list:")
         liste_de_course.append(nouveau_element)
         print(f"L'element {nouveau_element} a bien ete ajouté dans la liste.")
         continue
